@@ -16,32 +16,18 @@ I enjoy solving real-world problems using data, building machine learning models
 
 ---
 
-## 🧠 Featured Projects
-
-### 📩 SMS Spam Classifier
-A machine learning model that detects spam messages using **Natural Language Processing (NLP)** techniques.
-
-### 🏏 IPL Match Winner Prediction
-Predictive model built using machine learning to forecast **IPL match outcomes** based on historical match data.
-
-### 🎬 Movie Recommendation System
-A recommendation system that suggests movies to users based on similarity and user preferences.
-
-### 🥗 Meal Recommendation System
-An AI-based system that provides **personalized dietary recommendations** using machine learning.
 
 ---
 
-## 🛠️ Technologies Used
+## 📬 Contact
 
-- HTML
-- CSS
-- JavaScript
-- Git
-- Machine Learning Concepts
-- Data Analysis
+📧 Email: prashantbanjare9822@gmail.com  
+💼 LinkedIn: https://www.linkedin.com/in/prashant-banjare-884075265/
+💻 GitHub: https://github.com/PrashantBanjare
 
 ---
 
-## 📂 Project Structure
+⭐ If you like this project, feel free to **star the repository**!
+---
+
 
