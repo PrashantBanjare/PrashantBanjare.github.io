@@ -6,12 +6,46 @@
     left:0;
     z-index:-1;
     background:#0f172a;
+    transition:background 0.4s ease;
 }
 body{
     font-family: Arial, sans-serif;
     margin:0;
     background:transparent;
-    color:white
+    color:white;
+    transition:background 0.4s ease;
+}
+
+body.theme-about #particles-js{
+    background: linear-gradient(135deg, #081229, #001f3f);
+}
+
+body.theme-about{
+    background: #081229;
+}
+
+body.theme-skills #particles-js{
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.theme-skills{
+    background: #141e30;
+}
+
+body.theme-projects #particles-js{
+    background: linear-gradient(135deg, #0f172a, #1b263b);
+}
+
+body.theme-projects{
+    background: #0f172a;
+}
+
+body.theme-contact #particles-js{
+    background: linear-gradient(135deg, #071a2f, #0a4152);
+}
+
+body.theme-contact{
+    background: #071a2f;
 }
 
 /* NAVBAR */
@@ -22,8 +56,20 @@ nav{
     align-items:center;
     background:#1e1e1e;
     padding:15px 60px;
-    position:sticky;
+    position:fixed;
     top:0;
+    left:0;
+    width:100%;
+    box-sizing:border-box;
+    z-index:1000;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding-top:70px;
+    background:transparent;
+    color:white
 }
 
 .logo{
@@ -57,16 +103,53 @@ nav{
 header{
     background: url("images/banner.jpg") center/cover no-repeat;
     padding:120px 10%;
+    scroll-snap-align: start;
 }
 
 header h1{
-    font-size:48px;
-    margin-bottom:10px;
+    font-size:64px;
+    margin-bottom:15px;
 }
 
 header p{
-    font-size:20px;
+    font-size:26px;
     color:#00adb5;
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.hero-text .btn{
+    padding:14px 26px;
+    font-size:16px;
+}
+
+.social-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:30px;
+}
+
+.stat-card{
+    background:rgba(255,255,255,0.08);
+    padding:18px 20px;
+    border-radius:14px;
+    min-width:150px;
+    flex:1;
+    max-width:220px;
+}
+
+.stat-card h4{
+    margin:0 0 10px;
+    font-size:18px;
+}
+
+.stat-card p{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
 }
 
 /* SECTIONS */
@@ -74,6 +157,7 @@ header p{
 section{
     padding:60px 10%;
     background:rgba(0,0,0,0.5);
+    scroll-margin-top:90px;
 }
 
 h2{
@@ -84,6 +168,42 @@ h2{
 /* ABOUT */
 
 #about p{
+    line-height:1.6;
+}
+
+.education-list{
+    padding-left:20px;
+    margin:0 0 20px;
+}
+
+.education-list li{
+    margin-bottom:14px;
+    line-height:1.6;
+}
+
+.education-year{
+    display:inline-block;
+    margin-left:10px;
+    color:#00adb5;
+    font-weight:600;
+}
+
+.about-text .hobby{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    margin-top:20px;
+}
+
+.about-text .hobby img{
+    width:100px;
+    height:auto;
+    border-radius:12px;
+    flex-shrink:0;
+}
+
+.about-text .hobby p{
+    margin:0;
     line-height:1.6;
 }
 
@@ -129,11 +249,29 @@ h2{
     font-weight:bold;
 }
 
+.project a.btn {
+    background:#00adb5;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
 /* CONTACT */ 
 
-#contact p{
-    font-size:18px; 
-    
+#contact{
+    font-size:20px;
+    padding:80px 10%;
+}
+
+#contact p,
+#contact a{
+    font-size:20px;
+}
+
+#contact .btn{
+    padding:14px 26px;
+    font-size:16px;
 }
 
 /* FOOTER */
@@ -144,9 +282,27 @@ footer{
     text-align:center;
     padding:20px;
 }
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e1e1e;
+    margin-top:40px;
+}
 
 html{
     scroll-behavior:smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    padding:60px 10%;
+    background:rgba(0,0,0,0.5);
+    scroll-margin-top:90px;
+    scroll-snap-align: start;
 }
 
 .btn{

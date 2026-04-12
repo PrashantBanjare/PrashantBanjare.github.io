@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+Thumbs.db
+# Node modules
+node_modules/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# Dependency directories
+.pnpm-debug.log*
+# Build output
+dist/
+build/
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+# Environment files
+.env
+.env.local
+.env.*.local
+# Misc
+*.log
+*.tmp
+*.bak
+*~
+# OneDrive temporary files
+~*
+
+# Ignore project asset folders
+resume/
+images/
