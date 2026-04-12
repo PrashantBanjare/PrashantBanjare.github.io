@@ -23,6 +23,7 @@ I enjoy solving real-world problems using data, building machine learning models
 
 📧 Email: prashantbanjare9822@gmail.com  
 💼 LinkedIn: https://www.linkedin.com/in/prashant-banjare-884075265/
+
 💻 GitHub: https://github.com/PrashantBanjare
 
 ---
