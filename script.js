@@ -2,7 +2,7 @@
 console.log("Welcome to Prashant Banjare Portfolio");
 
 // Highlight active section in navbar
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
 
 
 // SCROLL ANIMATION
-const revealElements = document.querySelectorAll("section");
+const revealElements = document.querySelectorAll("section, header");
 
 const sectionThemes = {
     about: "theme-about",
@@ -96,3 +96,34 @@ async function updateSocialStats() {
         githubCount.textContent = "Unable to load";
     }
 }
+
+let scrollSnapTimeout;
+const snapTargets = Array.from(document.querySelectorAll('header, section'));
+
+
+// This block is forcing the page to snap to the nearest section after you stop scrolling: It calculates which section is closest to the top of the viewport and smoothly scrolls to it after a short delay. You can adjust the delay time (currently 120ms) to make it feel more responsive or less aggressive based on your preference.
+
+// const snapToNearestSection = () => {
+//     const offset = window.scrollY + 80;
+//     let closest = snapTargets[0];
+//     let minDistance = Math.abs(snapTargets[0].offsetTop - offset);
+
+//     snapTargets.forEach(el => {
+//         const distance = Math.abs(el.offsetTop - offset);
+//         if (distance < minDistance) {
+//             minDistance = distance;
+//             closest = el;
+//         }
+//     });
+
+//     if (closest) {
+//         window.scrollTo({ top: closest.offsetTop - 70, behavior: 'smooth' });
+//     }
+// };
+
+// window.addEventListener('scroll', () => {
+//     clearTimeout(scrollSnapTimeout);
+//     scrollSnapTimeout = setTimeout(() => {
+//         snapToNearestSection();
+//     }, 120);
+// });

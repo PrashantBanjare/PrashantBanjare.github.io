@@ -54,7 +54,7 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#1e1e1e;
+    background:#040a72;
     padding:15px 60px;
     position:fixed;
     top:0;
@@ -102,8 +102,7 @@ body{
 
 header{
     background: url("images/banner.jpg") center/cover no-repeat;
-    padding:120px 10%;
-    scroll-snap-align: start;
+    padding:60px 10%;
 }
 
 header h1{
@@ -155,9 +154,9 @@ header p{
 /* SECTIONS */
 
 section{
-    padding:60px 10%;
+    padding:30px 10%;
     background:rgba(0,0,0,0.5);
-    scroll-margin-top:90px;
+    scroll-margin-top:70px;
 }
 
 h2{
@@ -174,6 +173,56 @@ h2{
 .education-list{
     padding-left:20px;
     margin:0 0 20px;
+}
+
+/* EXPERIENCE */
+
+#experience .experience-list{
+    display:grid;
+    gap:20px;
+}
+
+.experience-item{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.experience-item h3{
+    margin-top:0;
+}
+
+.experience-meta{
+    color:#00adb5;
+    margin:10px 0 8px;
+    font-weight:600;
+}
+
+.experience-certificate{
+    margin:0 0 16px;
+    color:#d1d5db;
+    font-size:0.95rem;
+    font-style:italic;
+}
+
+.certificate-link{
+    color:#00adb5;
+    text-decoration:none;
+}
+
+.certificate-link:hover{
+    text-decoration:underline;
+}
+
+.experience-item ul{
+    padding-left:20px;
+    margin:0;
+}
+
+.experience-item li{
+    margin-bottom:10px;
+    line-height:1.6;
 }
 
 .education-list li{
@@ -261,7 +310,7 @@ h2{
 
 #contact{
     font-size:20px;
-    padding:80px 10%;
+    padding:35px 10%;
 }
 
 #contact p,
@@ -289,20 +338,22 @@ footer{
     margin-top:40px;
 }
 
-html{
+/* html{
     scroll-behavior:smooth;
-    scroll-snap-type: y mandatory;
+    height:100%;
 }
 
 body{
+    min-height:100%;
     scroll-snap-type: y mandatory;
+} */
+
+html{
+    height:100%;
 }
 
-section{
-    padding:60px 10%;
-    background:rgba(0,0,0,0.5);
-    scroll-margin-top:90px;
-    scroll-snap-align: start;
+body{
+    min-height:100%;
 }
 
 .btn{
@@ -314,17 +365,35 @@ section{
     border-radius:5px;
     text-decoration:none;
 }
+/* ############################################################################################################################## */
+/* ############################################################################################################################## */
+/* ############################################################################################################################## */
+/* ############################################################################################################################## */
 
-
+/* header,
 section{
     opacity:0;
     transform:translateY(40px);
     transition:all 0.6s ease;
+    scroll-snap-align:start;
+    scroll-snap-stop: always;
+    min-height:calc(100vh - 70px);
+    box-sizing:border-box;
 }
 
-section.show{
+section.show,
+header.show{
     opacity:1;
     transform:translateY(0);
+} */
+/* ############################################################################################################################## */
+/* ############################################################################################################################## */
+/* ############################################################################################################################## */
+header, section{
+    opacity:1;
+    transform:none;
+    min-height:auto;
+    box-sizing:border-box;
 }
 
 .about-container{
@@ -367,6 +436,106 @@ section.show{
 .hero-image{
     flex:1;
     text-align:right;
+}
+
+/* Mobile responsive adjustments */
+
+@media (max-width: 900px) {
+    nav {
+        padding: 15px 30px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header {
+        padding: 80px 8%;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 240px;
+        max-width: 100%;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .cv-section {
+        text-align: center;
+    }
+
+    section {
+        padding: 45px 8%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 12px 20px;
+    }
+
+    header {
+        padding: 60px 5%;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 20px;
+    }
+
+    .hero-image img {
+        width: 200px;
+    }
+
+    .social-stats {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+        min-width: auto;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+
+    #contact {
+        padding: 40px 5%;
+        font-size: 18px;
+    }
+
+    #contact p,
+    #contact a {
+        font-size: 18px;
+    }
+
+    .cv-preview {
+        width: 120px;
+    }
+
+    .project,
+    .experience-item,
+    .about-text,
+    .cv-section {
+        padding: 18px;
+    }
 }
 
 .hero-image img{

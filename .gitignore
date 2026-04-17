@@ -32,5 +32,8 @@ build/
 ~*
 
 # Ignore project asset folders
-resume/
-images/
+# keep resume, images, and certificates in version control for deployment
+# (remove from ignore so site assets are published)
+# resume/
+# images/
+# Certificates/
