@@ -127,3 +127,27 @@ const snapTargets = Array.from(document.querySelectorAll('header, section'));
 //         snapToNearestSection();
 //     }, 120);
 // });
+
+// Feedback form handling
+const feedbackForm = document.getElementById("feedback-form");
+const formStatus = document.getElementById("form-status");
+
+if (feedbackForm) {
+    feedbackForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const rating = document.getElementById("rating").value;
+        const message = document.getElementById("message").value.trim();
+
+        if (!rating || !message) {
+            formStatus.textContent = "Please fill in the rating and feedback message.";
+            return;
+        }
+
+        formStatus.textContent = "Thank you! Your feedback has been recorded.";
+
+        feedbackForm.reset();
+    });
+}

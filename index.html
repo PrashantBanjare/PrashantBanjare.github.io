@@ -45,7 +45,7 @@
         </div>
         <div class="stat-card">
             <h4>LinkedIn</h4>
-            <p id="linkedin-connections">115+</p>
+            <p id="linkedin-connections">150+</p>
         </div>
     </div>
 </div>
@@ -212,29 +212,69 @@
 <section id="projects">
     <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Real vs Fake Image Classification Model</h3>
-        <!-- <img src="images/project1.png" width="100%"> -->
-        <p>Deep learning model to classify images into real and AI generated categories.</p>
-        <a href="https://github.com/PrashantBanjare/Real_Fake_img_Classification" target="_blank">View Project</a>
+        <div class="project">
+            <h3>Research Paper Explainer using Generative AI</h3>
 
-        <a href="https://real-fake-img-classifier.onrender.com" target="_blank" class="btn">Test Project</a>
-    </div>
+            <ul class="project-points">
+                <li>Developed an AI-powered application to upload research papers, ask text/voice questions, and receive simplified answers.</li>
+                <li>Implemented a RAG pipeline that extracts PDF text, chunks content, creates embeddings, and retrieves relevant context.</li>
+                <li>Built using React.js, Tailwind CSS, FastAPI, LangChain, FAISS, HuggingFace Embeddings, Groq API, PyPDF, and gTTS.</li>
+                <li>Future scope includes equation explanation, citation generation, multilingual support, and domain-specific research paper assistance.</li>
+            </ul>
 
-    <div class="project">
-        <h3>IPL Match Winner Prediction</h3>
-        <!-- <img src="images/project1.png" width="100%"> -->
-        <p>Predicts IPL match winners using historical data.</p>
-        <a href="https://github.com/PrashantBanjare/IPL_MatchWinner_Prediction" target="_blank">View Project</a>
-    </div>
+            <a href="https://github.com/PrashantBanjare/voice-research-paper-explainer" target="_blank">View Project</a>
+        </div>
 
-    <div class="project">
+        <div class="project">
+            <h3>Real vs Fake Image Classification Model</h3>
 
-        <h3>Movie Recommendation System</h3>
-        <!-- <img src="images/project1.png" width="100%"> -->
-        <p>Recommends movies based on user preferences.</p>
-        <a href="https://github.com/PrashantBanjare/MovieRecommendation" target="_blank">View Project</a>
-    </div>
+            <ul class="project-points">
+                <li>Developed a deep learning application that classifies uploaded images as real or AI-generated images in real time.</li>
+                
+                <li>Processed 5,400+ images using resizing, normalization, and data augmentation before training a CNN model for binary classification.</li>
+                
+                <li>Built using TensorFlow, CNN, FastAPI, REST API, HTML, CSS, and deployed the model for real-time predictions.</li>
+                
+                <li>Achieved 94.57% accuracy with 0.94 F1-score and future improvements include larger datasets and multi-class deepfake detection.</li>
+            </ul>
+
+            <a href="https://github.com/PrashantBanjare/Real_Fake_img_Classification" target="_blank">View Project</a>
+
+            <a href="https://real-fake-img-classifier.onrender.com" target="_blank" class="btn">Test Project</a>
+        </div>
+
+        <div class="project">
+            <h3>IPL Match Winner Prediction</h3>
+
+            <ul class="project-points">
+                <li>Developed a machine learning application that predicts IPL match winners based on real-time match conditions.</li>
+
+                <li>Processed 756 matches and 179,078 deliveries, performed EDA with 10 visualizations, and engineered 10 key features.</li>
+
+                <li>Built using Python, Pandas, NumPy, SQL, Scikit-learn, XGBoost, Matplotlib, Seaborn, Streamlit, and Render deployment.</li>
+
+                <li>Achieved an F1-score of 0.99 and future improvements include live API integration and player-level predictions.</li>
+            </ul>
+
+            <a href="https://github.com/PrashantBanjare/IPL_MatchWinner_Prediction" target="_blank">View Project</a>
+            <a href="https://ipl-matchwinner-prediction.onrender.com/" target="_blank" class="btn">Test Project</a>
+        </div>
+
+        <div class="project">
+            <h3>Movie Recommendation System</h3>
+
+            <ul class="project-points">
+                <li>Developed a recommendation system that suggests similar movies based on user-selected movie preferences.</li>
+
+                <li>Processed metadata from 4,800 movies by combining 5 key features into a single text representation.</li>
+
+                <li>Built using Python, Pandas, NumPy, Scikit-learn, NLP techniques, CountVectorizer, and cosine similarity.</li>
+
+                <li>Generated top 5 real-time movie recommendations and future improvements include collaborative filtering and user personalization.</li>
+            </ul>
+
+            <a href="https://github.com/PrashantBanjare/MovieRecommendation" target="_blank">View Project</a>
+        </div>
 
 </section>
 
@@ -242,11 +282,20 @@
 
 <section id="contact">
     <h2>Contact</h2>
-    <a href="mailto:prashantbanjare9822@gmail.com" target="_blank">prashantbanjare9822@gmail.com</a>
-    <br/>
-    <a href="https://www.instagram.com/p_r_a_s_h_a_n_t__b/" target="_blank">Instagram</a>
 
-    
+    <div class="contact-links-simple">
+
+        <a href="mailto:prashantbanjare9822@gmail.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail Logo">
+            prashantbanjare9822@gmail.com
+        </a>
+
+        <a href="https://www.instagram.com/p_r_a_s_h_a_n_t__b/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Logo">
+            p_r_a_s_h_a_n_t__b
+        </a>
+
+    </div>
 </section>
 
 <footer>
