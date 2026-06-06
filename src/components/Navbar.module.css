@@ -1,0 +1,112 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 5vw, 80px);
+  transition: all 0.4s ease;
+}
+ 
+.nav.scrolled {
+  background: rgba(5, 10, 20, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+}
+ 
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--teal);
+  background: none;
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: -1px;
+}
+.logo:hover {
+  background: var(--teal-dim);
+  box-shadow: 0 0 20px var(--teal-glow);
+}
+ 
+.links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+}
+ 
+.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: var(--transition);
+  position: relative;
+  letter-spacing: 0.3px;
+}
+.link:hover {
+  color: var(--text);
+  background: var(--bg-card);
+}
+.link.active {
+  color: var(--teal);
+  background: var(--teal-dim);
+}
+ 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+ 
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+ 
+  .links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: rgba(5,10,20,0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 24px;
+    gap: 4px;
+    transform: translateY(-110%);
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    border-bottom: 1px solid var(--border);
+  }
+  .links.open {
+    transform: translateY(0);
+  }
+  .link { font-size: 16px; padding: 12px 16px; }
+  .cross1 { transform: rotate(45deg) translate(5px, 5px); }
+  .crossMid { opacity: 0; }
+  .cross2 { transform: rotate(-45deg) translate(5px, -5px); }
+}

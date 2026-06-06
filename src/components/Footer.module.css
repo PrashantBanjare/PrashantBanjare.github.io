@@ -1,0 +1,36 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  padding: 40px clamp(20px, 8vw, 120px);
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copy {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.made {
+  font-size: 12px;
+  color: var(--text-3);
+}

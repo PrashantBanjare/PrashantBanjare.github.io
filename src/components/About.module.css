@@ -1,0 +1,117 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+ 
+.bio {}
+ 
+.para {
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+ 
+.actions {
+  margin: 28px 0;
+}
+ 
+.hobbyCard {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  margin-top: 8px;
+  align-items: flex-start;
+}
+.hobbyIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+.hobbyTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hobbyText {
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+ 
+/* Education */
+.eduHeading {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+ 
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.eduCard {
+  padding: 20px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.eduCard::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--teal);
+  border-radius: 0 2px 2px 0;
+}
+ 
+.eduYear {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--teal);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+ 
+.eduDegree {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+ 
+.eduInst {
+  color: var(--text-2);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+ 
+.eduLink {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.eduLink:hover {
+  color: var(--teal);
+}
+ 
+.eduScore {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(245,166,35,0.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(245,166,35,0.2);
+}
+ 
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+}

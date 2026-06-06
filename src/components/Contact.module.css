@@ -1,0 +1,142 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 48px;
+  align-items: start;
+}
+
+.intro {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.linkCard:hover {
+  transform: translateX(6px);
+}
+
+.linkIcon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+
+  flex-shrink: 0;
+
+  font-size: 22px;
+  color: var(--teal);
+
+  transition: var(--transition);
+}
+
+.linkCard:hover .linkIcon {
+  color: white;
+  background: var(--teal);
+  box-shadow: 0 0 18px var(--teal-glow);
+}
+
+.linkLabel {
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.linkValue {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* CTA Card */
+
+.cta {
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.ctaGlow {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 200px;
+  height: 200px;
+
+  background: radial-gradient(
+    circle,
+    var(--teal-glow),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.ctaIcon {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+
+  background: rgba(0, 255, 200, 0.08);
+  border: 1px solid rgba(0, 255, 200, 0.2);
+
+  border-radius: 20px;
+
+  color: var(--teal);
+
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.08);
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.ctaText {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
