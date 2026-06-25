@@ -11,10 +11,10 @@
 }
  
 .nav.scrolled {
-  background: rgba(5, 10, 20, 0.85);
+  background: rgba(248,250,252,0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 30px rgba(15,23,42,0.06);
 }
  
 .logo {

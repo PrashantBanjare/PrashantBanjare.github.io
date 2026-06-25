@@ -45,7 +45,7 @@ export default function Skills() {
   const avgLevel = Math.round(categorySkills.reduce((s, k) => s + k.level, 0) / categorySkills.length)
 
   return (
-    <section id="skills" className="section" ref={sectionRef}>
+    <section id="skills" className={`section reveal ${animate ? 'reveal-visible' : ''}`} ref={sectionRef}>
       <p className="section-tag">Technical Arsenal</p>
       <h2 className="section-title">Skills</h2>
       <p className="section-desc">Self-assessed expertise across the full data science stack.</p>

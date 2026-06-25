@@ -100,12 +100,12 @@ export default function Hero() {
           </div>
           <div className={styles.statDiv} />
           <div className={styles.stat}>
-            <span className={styles.statNum}>460+</span>
+            <span className={styles.statNum}>520+</span>
             <span className={styles.statLabel}>Instagram</span>
           </div>
           <div className={styles.statDiv} />
           <div className={styles.stat}>
-            <span className={styles.statNum}>420+</span>
+            <span className={styles.statNum}>640+</span>
             <span className={styles.statLabel}>LinkedIn</span>
           </div>
           <div className={styles.statDiv} />

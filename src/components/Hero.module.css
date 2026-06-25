@@ -119,9 +119,8 @@
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(340px, 35vw, 500px);
-  height: clamp(340px, 35vw, 500px);
-  background: radial-gradient(circle, rgba(0,200,190,0.25) 0%, transparent 70%);
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
   filter: blur(40px);
   border-radius: 50%;
   pointer-events: none;
@@ -130,10 +129,10 @@
 
 /* Static border — NO rotation at all */
 .photoBorder {
-  width: clamp(340px, 35vw, 500px); height: clamp(340px, 35vw, 500px);
+  width: 300px; height: 300px;
   border-radius: 50%;
   padding: 4px;
-  background: linear-gradient(135deg, var(--teal) 0%, rgba(0,200,190,0.2) 50%, var(--teal) 100%);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--teal) 50%, #60a5fa 100%);
   position: relative;
   z-index: 1;
   flex-shrink: 0;
@@ -205,7 +204,7 @@
   background: var(--teal) !important;
   width: 24px !important;
   border-radius: 4px !important;
-  box-shadow: 0 0 10px rgba(0,200,190,0.4);
+  box-shadow: 0 0 10px rgba(37,99,235,0.35);
 }
 
 /* Floating chips */

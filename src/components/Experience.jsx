@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import { experiences } from '../data/portfolio'
 import styles from './Experience.module.css'
+import { useReveal } from '../hooks/useReveal'
  
 export default function Experience() {
   const [activeExp, setActiveExp] = useState(0)
   const exp = experiences[activeExp]
+  const [ref, visible] = useReveal()
  
   return (
-    <section id="experience" className="section">
+    <section id="experience" className={`section reveal ${visible ? 'reveal-visible' : ''}`} ref={ref}>
       <p className="section-tag">Work History</p>
       <h2 className="section-title">Experience</h2>
       <p className="section-desc">Where I've applied my skills in real-world environments.</p>
@@ -16,11 +18,7 @@ export default function Experience() {
         {/* Sidebar timeline */}
         <div className={styles.sidebar}>
           {experiences.map((e, i) => (
-            <button
-              key={i}
-              className={`${styles.tabBtn} ${activeExp === i ? styles.tabActive : ''}`}
-              onClick={() => setActiveExp(i)}
-            >
+            <button key={i} className={`${styles.tabBtn} stagger-item ${activeExp === i ? styles.tabActive : ''}`} onClick={() => setActiveExp(i)}>
               <div className={styles.tabIndicator} />
               <div className={styles.tabContent}>
                 <span className={styles.tabRole}>{e.role}</span>

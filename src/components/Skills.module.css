@@ -68,10 +68,9 @@
 }
 .barFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--teal), #00e8dd);
+  background: linear-gradient(90deg, var(--gold), var(--teal), #60a5fa);
   border-radius: 100px;
   transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
 }
 .barFill::after {
   content: '';

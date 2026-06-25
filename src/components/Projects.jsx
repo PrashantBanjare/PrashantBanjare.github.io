@@ -1,24 +1,22 @@
 import { useState } from 'react'
 import { projects } from '../data/portfolio'
 import styles from './Projects.module.css'
+import { useReveal } from '../hooks/useReveal'
 
 export default function Projects() {
   const [activeProj, setActiveProj] = useState(null)
   const proj = activeProj !== null ? projects[activeProj] : null
+  const [ref, visible] = useReveal()
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className={`section reveal ${visible ? 'reveal-visible' : ''}`} ref={ref}>
       <p className="section-tag">What I've Built</p>
       <h2 className="section-title">Projects</h2>
       <p className="section-desc">End-to-end ML systems, deployed and battle-tested.</p>
 
       <div className={styles.grid}>
         {projects.map((p, i) => (
-          <div
-            key={i}
-            className={`card ${styles.projCard} ${activeProj === i ? styles.projActive : ''}`}
-            onClick={() => setActiveProj(activeProj === i ? null : i)}
-          >
+          <div key={i} className={`card stagger-item ${styles.projCard} ${activeProj === i ? styles.projActive : ''}`} onClick={() => setActiveProj(activeProj === i ? null : i)}>
             {/* Number */}
             <div className={styles.projNum}>0{i + 1}</div>
 
