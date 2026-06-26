@@ -1,0 +1,36 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+
+# Local env files
+.env
+.env.*
+
+# Vite cache
+.vite/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/editor files
+.vscode/
+*.code-workspace
+
+# Coverage
+coverage/
+
+# macOS metadata
+.AppleDouble
+.LSOverride
+
+# Windows image cache
+ehthumbs.db
